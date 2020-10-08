@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#nav ul {
+    padding-left: 20;
+}
+
+#content,
+#nav,
+#supporting {
+    margin-top: 100px;
+}
+
+
+/*會產生重疊，所以把每個div在用一個div class = container包起來然後在container上加padding*/
+/*
+#content, #nav, #supporting,#banner, #footer{
+    padding: 5px;
+}
+*/
+
+/*.代表class*/
+.container {
+/*    使匡格內的字不會連著匡格，做文字的內縮*/
+    padding: 5px;
+/*    可以使個匡隔間有空隙*/
+    margin: 10px;
+}
+
+
+#wrapper {
+    width: 800px;
+    /*    上下margin為0 左右margin為auto*/
+    margin: 0 auto;
+}
+
+
+/*使得當我案nav時，不會使字切齊上方，現在上方還有100px*/
+#intro,
+#news,
+#photo {
+    padding-top: 100px;
+}
+
+/*######################################################*/
+
+
+
+#banner {
+    color: gold;
+    background-color: rgba(128, 128, 130, 0.2);
+    width: 800px;
+    height: 100px;
+    clear: both;
+    position: fixed;
+}
+
+#nav {
+/*    background-color: darkcyan;*/
+    width: 100px;
+    height: 200px;
+    float: left;
+/*    設為fixed就不佔空間 會到最左邊*/
+    position: fixed;
+    /*    margin設為負數：可以使nav放到外面*/
+    margin-left: -100px;
+}
+
+#content {
+    background-color: chocolate;
+    margin-left: 100px;
+    width: 600px;
+    height: 1000px;
+    float: left;
+
+}
+
+#supporting {
+    background-color: cornsilk;
+    width: 100px;
+    height: 200px;
+    float: left;
+    position: fixed;
+    margin-left : 800px;
+
+}
+
+#footer {
+    background-color: coral;
+    width: 800px;
+    float: left;
+    clear: both;
+
+}
+
+/********************************************/
+/*from chrome inspect : copy selector*/
+/*
+#nav > div > ul > li:nth-child(1) {
+    color: white;
+    background-color: lightgreen;
+}
+*/
+
+/*與 #nav li{}一樣*/
+#nav > div > ul > li {
+/*    display block : 使左方點消失*/
+    display: block;
+/*    background-color: aquamarine;*/
+/*    使每個li分開*/
+    margin-top: 5px;
+    text-align: center;
+}
+#nav > div > ul > li > a {
+    color: black;
+/*    取消hyperlink下面的線*/
+    text-decoration: none;
+    background-color: aqua;
+}
+
+/*hover表示滑鼠移到上面*/
+#nav li a:hover {
+    background-color : red;
+}
+/**********************/
+
+
+
+
+/*class為img的<div>*/
+div.img {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid gray;
+    height: auto;
+    width: auto;
+/*    從左到右旁版*/
+    float: left;
+    text-align: center;
+}
+
+/*class為img的<div>  中的img元素*/
+div.img img {
+ 
+    display: inline;
+    margin: 50px;
+    width: 50px;
+/*    border要與下面的border相等不然會擠到*/
+    border: 5px solid rgba(0,0,0,0);
+    
+}
+
+div.img a:hover img {
+    border:5px solid darkgray;
+}
